@@ -1,7 +1,7 @@
 /*  Application MIROIR  : cote serveur      */
 
 #include "commun.h"
-
+//coucou
 void reponse (char *chaine);
 
 int
@@ -90,10 +90,10 @@ main (int argc, char **argv) {
 
 void reponse(char *chaine) {
     if (strcmp("bonjour",chaine)==0)
-    { 
+    {
 		strcpy(chaine,"gagne");
 	}
-    else 
+    else
     {
 		strcpy(chaine,"perdu");
 	}
