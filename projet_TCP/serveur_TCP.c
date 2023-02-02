@@ -80,44 +80,48 @@ main (int argc, char **argv)
             continue;
         }
         printf ("---------------------CONNEXION de %s:%d\n",
-            inet_ntoa (adresse_appelant.sin_addr),
-            ntohs (adresse_appelant.sin_port));
+        inet_ntoa (adresse_appelant.sin_addr),
+        ntohs (adresse_appelant.sin_port));
+        while(1)
+        {
 
-        /* réception */
-        recus = recv (guichet, message, sizeof (message), 0);
-        if (recus < 0)
-        {
-            perror ("ERREUR-recv ");
-            shutdown (guichet, SHUT_RDWR);
-            close (guichet);
-            continue;
-        }
-        else
-        {
-            printf ("RECU %d octets : ", recus);
-            printf ("\t%s\n", message);
-            if(strcmp(message,"quit")==0)
+            /* réception */
+            recus = recv (guichet, message, sizeof (message), 0);
+            if (recus < 0)
             {
-                printf ("---------------------FIN de CONNEXION de %s:%d\n",
-                inet_ntoa (adresse_appelant.sin_addr),
-                ntohs (adresse_appelant.sin_port));
+                perror ("ERREUR-recv ");
                 shutdown (guichet, SHUT_RDWR);
                 close (guichet);
-            }
-            /* on calcule la réponse */
-            miroir (message);
-
-            /* et on lui renvoie */
-            emis = send (guichet, message, strlen (message) + 1,
-                     0);
-            if (emis < 0)
-            {
-                perror ("ERREUR-send ");
+                continue;
             }
             else
             {
-                printf ("ENVOI %d octets : ",emis);
+                printf ("RECU %d octets : ", recus);
                 printf ("\t%s\n", message);
+                if(strcmp(message,"quit")==0)
+                {
+                    printf ("---------------------FIN de CONNEXION de %s:%d\n",
+                    inet_ntoa (adresse_appelant.sin_addr),
+                    ntohs (adresse_appelant.sin_port));
+                    shutdown (guichet, SHUT_RDWR);
+                    close (guichet);
+                }
+                /* on calcule la réponse */
+                miroir (message);
+
+                /* et on lui renvoie */
+                emis = send (guichet, message, strlen (message) + 1,
+                         0);
+                if (emis < 0)
+                {
+                    perror ("ERREUR-send ");
+                }
+                else
+                {
+                    printf ("ENVOI %d octets : ",emis);
+                    printf ("\t%s\n", message);
+                }
+
             }
         }
 
