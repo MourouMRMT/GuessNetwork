@@ -96,7 +96,14 @@ main (int argc, char **argv)
         {
             printf ("RECU %d octets : ", recus);
             printf ("\t%s\n", message);
-
+            if(strcmp(message,"quit")==0)
+            {
+                printf ("---------------------FIN de CONNEXION de %s:%d\n",
+                inet_ntoa (adresse_appelant.sin_addr),
+                ntohs (adresse_appelant.sin_port));
+                shutdown (guichet, SHUT_RDWR);
+                close (guichet);
+            }
             /* on calcule la réponse */
             miroir (message);
 
@@ -113,12 +120,9 @@ main (int argc, char **argv)
                 printf ("\t%s\n", message);
             }
         }
-        printf ("---------------------FIN de CONNEXION de %s:%d\n",
-            inet_ntoa (adresse_appelant.sin_addr),
-            ntohs (adresse_appelant.sin_port));
-        shutdown (guichet, SHUT_RDWR);
-        close (guichet);
+
     }
+
     close (point_acces_serveur);
 }
 

@@ -65,34 +65,36 @@ main (int argc, char **argv)
 		exit (-1);
 	}
 	printf ("CONNEXION etablie\n");
+    while(1)
+    {
 
-	/* lecture d'une ligne au clavier */
-	printf ("Que faut-il envoyer ? \n\t");
-	scanf("%99[^\n]",envoyer);
+        /* lecture d'une ligne au clavier */
+        printf ("Que faut-il envoyer ? \n\t");
+        scanf("%99[^\n]",envoyer);
+        getchar();
+        /* envoi du bloc d'octets */
+        emis = send (point_acces_client, envoyer, strlen (envoyer) + 1, 0);
+        if (emis < 0)
+        {
+            perror ("ERREUR-send ");
+            shutdown (point_acces_client, SHUT_RDWR);
+            close (point_acces_client);
+            exit (-1);
+        }
+        printf ("ENVOI de %d octets\n", emis);
 
-	/* envoi du bloc d'octets */
-	emis = send (point_acces_client, envoyer, strlen (envoyer) + 1, 0);
-	if (emis < 0)
-	{
-		perror ("ERREUR-send ");
-		shutdown (point_acces_client, SHUT_RDWR);
-		close (point_acces_client);
-		exit (-1);
-	}
-	printf ("ENVOI de %d octets\n", emis);
-
-	/* réception de la réponse */
-	recus = recv (point_acces_client, recu, sizeof (recu), 0);
-	if (recus < 0)
-	{
-		perror ("ERREUR-recv ");
-		shutdown (point_acces_client, SHUT_RDWR);
-		close (point_acces_client);
-		exit (-1);
-	}
-	printf ("RECU  %d octets :", recus);
-	printf ("\t%s\n", recu);
-
+        /* réception de la réponse */
+        recus = recv (point_acces_client, recu, sizeof (recu), 0);
+        if (recus < 0)
+        {
+            perror ("ERREUR-recv ");
+            shutdown (point_acces_client, SHUT_RDWR);
+            close (point_acces_client);
+            exit (-1);
+        }
+        printf ("RECU  %d octets :", recus);
+        printf ("\t%s\n", recu);
+    }
 	/* fermeture du point d'accès */
 	shutdown (point_acces_client, SHUT_RDWR);
 	close (point_acces_client);
