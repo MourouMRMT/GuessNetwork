@@ -1,7 +1,7 @@
 /*  Application MIROIR  : cote serveur      */
 
 #include "commun.h"
-//coucou
+void begin (char *chaine);
 void reponse (char *chaine);
 
 int flag=0;
@@ -111,7 +111,7 @@ void begin(char *chaine)
 {
     if(strcmp("oui",chaine)==0)
 	{
-		strcpy(chaine,"gogogogo");
+		strcpy(chaine,&questions[1].question);
 
 	}
 }
