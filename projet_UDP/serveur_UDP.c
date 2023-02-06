@@ -90,20 +90,18 @@ main (int argc, char **argv) {
 
 void reponse(char *chaine) {
 
-      if (strcmp("begin",chaine)==0)
-
+    if (strcmp("begin",chaine)==0)
     {
-
 		strcpy(chaine,"Bienvenue dans GuestNetwork \n\tVoulez vous commencez");
 
-	}
-
-    else
-
+    if (strcmp("begin",chaine)==0)
     {
+		strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
 
+	}
+    else
+    {
 		strcpy(chaine,"Commencez le jeu en saisissant begin ");
-
 	}
 	if(strcmp("oui",chaine)==0)
 	{
