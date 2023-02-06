@@ -95,9 +95,16 @@ main (int argc, char **argv)
                 printf ("\t%s\n", recu);
             }
         }
+		if(strcmp(recu,"quit")==0)
+		{
+			/* fermeture du point d'accès */
+			close (point_acces_client);
+		}
+		
+		
+		
 	}
-        /* fermeture du point d'accès */
-        close (point_acces_client);
+
 
         exit (0);
     

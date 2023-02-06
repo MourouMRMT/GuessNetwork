@@ -90,6 +90,11 @@ main (int argc, char **argv) {
                 printf("ENVOI %d octets\n", strlen(message)+1);
                 printf("\t%s\n",message);
                 }
+
+        }
+        if(strcmp(message,"quit")==0)
+        {
+            strcpy(chaine,"quit");
         }
     }
 }
@@ -116,3 +121,4 @@ void begin(char *chaine)
 
 	}
 }
+
