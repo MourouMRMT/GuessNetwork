@@ -89,12 +89,26 @@ main (int argc, char **argv) {
 }
 
 void reponse(char *chaine) {
-    if (strcmp("bonjour",chaine)==0)
+
+      if (strcmp("begin",chaine)==0)
+
     {
-		strcpy(chaine,"gagne");
+
+		strcpy(chaine,"Bienvenue dans GuestNetwork \n\tVoulez vous commencez");
+
 	}
+
     else
+
     {
-		strcpy(chaine,"perdu");
+
+		strcpy(chaine,"Commencez le jeu en saisissant begin ");
+
 	}
+	if(strcmp("oui",chaine)==0)
+	{
+		strcpy(chaine,"gogogogo");
+
+	}
+
 }
