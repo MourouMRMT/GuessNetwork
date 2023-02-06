@@ -1,6 +1,7 @@
 /*  Application MIROIR  : cote serveur      */
 
 #include "commun.h"
+#include "QCM.h"
 void begin (char *chaine);
 void reponse (char *chaine);
 
