@@ -4,7 +4,8 @@
 //coucou
 void reponse (char *chaine);
 
-int
+int flag=0;
+
 main (int argc, char **argv) {
 
     /*---------------------------------------------- les variables */
@@ -71,8 +72,12 @@ main (int argc, char **argv) {
             printf("\t%s\n",message);
 
                 /* on calcule la réponse */
-           reponse(message);
 
+            switch(flag)
+            {
+                case 0:reponse(message);
+                case 1:begin(message);
+            }
                 /* et on lui renvoie */
             emis =  sendto (point_acces_serveur,
                 message, strlen(message)+1, 0,
@@ -92,21 +97,21 @@ void reponse(char *chaine) {
 
     if (strcmp("begin",chaine)==0)
     {
-		strcpy(chaine,"Bienvenue dans GuestNetwork \n\tVoulez vous commencez");
-
-    if (strcmp("begin",chaine)==0)
-    {
 		strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
+		flag=1;
 
 	}
     else
     {
 		strcpy(chaine,"Commencez le jeu en saisissant begin ");
 	}
-	if(strcmp("oui",chaine)==0)
+
+}
+void begin(char *chaine)
+{
+    if(strcmp("oui",chaine)==0)
 	{
 		strcpy(chaine,"gogogogo");
 
 	}
-
 }
