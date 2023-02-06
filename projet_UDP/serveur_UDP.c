@@ -92,9 +92,9 @@ main (int argc, char **argv) {
                 }
 
         }
-        if(strcmp(message,"quit")==0)
+        if(strcmp(recus,"quit")==0)
         {
-            strcpy(chaine,"quit");
+            strcpy(message,"quit");
         }
     }
 }
