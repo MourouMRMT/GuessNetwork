@@ -92,10 +92,7 @@ main (int argc, char **argv) {
                 }
 
         }
-        if(strcmp(recus,"quit")==0)
-        {
-            strcpy(message,"quit");
-        }
+
     }
 }
 
