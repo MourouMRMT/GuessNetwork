@@ -4,8 +4,8 @@
 #include "QCM.h"
 void begin (char *chaine);
 void reponse (char *chaine);
-
 int flag=0;
+
 
 main (int argc, char **argv) {
 
@@ -73,7 +73,6 @@ main (int argc, char **argv) {
             printf("\t%s\n",message);
 
                 /* on calcule la réponse */
-
             switch(flag)
             {
                 case 0:reponse(message);
@@ -115,5 +114,9 @@ void begin(char *chaine)
     if(strcmp("oui",chaine)==0)
 	{
 		strcpy(chaine,questions[1].question);
+		printf("%s",questions[1].optionA);
+		printf("%s",questions[1].optionB);
+		printf("%s",questions[1].optionC);
+		printf("%s",questions[1].optionD);
 	}
 }
