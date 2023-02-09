@@ -101,22 +101,27 @@ void reponse(char *chaine) {
     {
 		strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
 		flag=1;
-
 	}
     else
     {
 		strcpy(chaine,"Commencez le jeu en saisissant begin ");
 	}
-
 }
 void begin(char *chaine)
 {
     if(strcmp("oui",chaine)==0)
 	{
 		strcpy(chaine,questions[1].question);
-		printf("%s",questions[1].optionA);
-		printf("%s",questions[1].optionB);
-		printf("%s",questions[1].optionC);
-		printf("%s",questions[1].optionD);
-	}
+		strcpy(chaine,questions[1].optionA);
+		strcpy(chaine,questions[1].optionB);
+		strcpy(chaine,questions[1].optionC);
+		strcpy(chaine,questions[1].optionD);
+		strcpy(chaine,"choisissez votre reponse parmi A B C ou D");
+    }
+
+		if(strcmp("A",chaine)==0)
+        {
+            strcpy(chaine,"GG tu as WIN!");
+        }
+
 }
