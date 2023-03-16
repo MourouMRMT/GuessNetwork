@@ -125,14 +125,14 @@ void begin(char *chaine)
 		flag++;
 		//jeu(chaine);
 		if(strcmp("reponse",chaine)==0)
-		{
+		
 			
-			if(strcmp("A",chaine)==0)
-			{
-				strcpy(chaine,"GG tu as WIN!");
-				
-			}
+		if(strcmp("A",chaine)==0)
+		{
+			strcpy(chaine,"GG tu as WIN!");
+			
 		}
+		
 	}
 
 }
