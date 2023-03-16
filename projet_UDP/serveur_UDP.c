@@ -7,7 +7,9 @@ void reponse (char *chaine);
 int J=0;
 int flag=0;
 
-
+struct sockaddr_in adresse_expediteur;
+struct sockaddr_in sock1;
+struct sockaddr_in sock2;
 main (int argc, char **argv) {
 
     /*---------------------------------------------- les variables */
@@ -17,9 +19,7 @@ main (int argc, char **argv) {
     int point_acces_serveur;
 
         /* pour le service */
-    struct sockaddr_in adresse_expediteur;
-    struct sockaddr_in sock1;
-    struct sockaddr_in sock2;
+
 	
 	sock1.sin_family=0;
 	sock1.sin_port=0;
