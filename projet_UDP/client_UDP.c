@@ -1,6 +1,10 @@
 /*  Application MIROIR  : cote clientent        */
 
 #include "commun.h"
+#include "QCM.h"
+
+
+void reponse(char *chaine);
 
 int main (int argc, char **argv)
 {
@@ -59,9 +63,8 @@ int main (int argc, char **argv)
     while(1)
     {
         /* lecture d'une ligne au clavier */
-        printf ("Que faut-il envoyer ? \n\t");
-        scanf("%99[^\n]",envoyer);
-        getchar();
+		reponse(recu,envoyer);
+
 	
         /* envoi d'un bloc d'octets */
         emis = sendto (point_acces_client,
@@ -103,4 +106,17 @@ int main (int argc, char **argv)
         exit (0);
     
  
+}
+
+void reponse(char* chaine_recu,char *chaine)
+{
+	if(strcmp("oui",chaine_recu)==0)
+	{
+		printf("%s",&questions[1].question);
+	}else
+	{
+	    printf ("Que faut-il envoyer ? \n\t");
+        scanf("%99[^\n]",chaine);
+        getchar();
+	}
 }
