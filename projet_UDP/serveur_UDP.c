@@ -57,7 +57,7 @@ int main (int argc, char **argv) {
         exit(-1);
     }
 
-
+	flag=0;
         /* phase de transfert */
     while(1) {
         lg_expediteur=sizeof(adresse_expediteur);
@@ -109,7 +109,7 @@ void reponse(char *chaine) {
     if (strcmp("begin",chaine)==0)
     {
 		strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
-		flag=1;
+		flag++;
 	}
     else
     {
@@ -122,13 +122,13 @@ void begin(char *chaine)
 	{
 		//strcpy(chaine,&questions[1].question);
 		strcpy(chaine,"GIga bite");
-		flag=2;
+		flag++;
 		//jeu(chaine);
-		if(strcmp("A",chaine)==0)
+		/*if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
 			
-        }
+        }*/
 	}
 
 }
