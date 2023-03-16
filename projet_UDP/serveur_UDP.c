@@ -82,7 +82,9 @@ int main (int argc, char **argv) {
 					begin(message);
 				case 2:
 					jeu(message);
-				default:flag=3,reponse(message);
+				default:
+					flag=3;
+					reponse(message);
             }
                 /* et on lui renvoie */
             emis =  sendto (point_acces_serveur,
@@ -116,7 +118,7 @@ void reponse(char *chaine) {
 }
 void begin(char *chaine)
 {
-    if(strcmp("oui",chaine)==0)
+    if(strcmp("oui",chaine)!=0)
 	{
 		//strcpy(chaine,&questions[1].question);
 		strcpy(chaine,"bite");
