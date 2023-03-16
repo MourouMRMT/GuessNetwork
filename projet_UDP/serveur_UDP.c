@@ -5,6 +5,7 @@
 void begin (char *chaine);
 void reponse (char *chaine);
 int J=0;
+int flag=0;
 
 
 main (int argc, char **argv) {
@@ -103,26 +104,26 @@ main (int argc, char **argv) {
         }
 
     }
-}
+
 
 void reponse(char *chaine) {
 
     if (strcmp("begin",chaine)==0)
     {
-		if(J1.sin_port==0)
+		if(sock1.sin_port==0)
 		{
-			J1.sin_port=adresse_expediteur.sin_port;
-			J1.sin_family=adresse_expediteur.sin_family;
+			sock1.sin_port=adresse_expediteur.sin_port;
+			sock1.sin_family=adresse_expediteur.sin_family;
 
 			inet_ntoa(adresse_expediteur.sin_addr),
 			ntohs(adresse_expediteur.sin_port));
 			//strcpy(message,"1");
 			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
 			//J=1;
-		}else if(adresse_expediteur.sin_port!=J1.sin_port && J2.sin_port==0)
+		}else if(adresse_expediteur.sin_port!=sock1.sin_port && sock2.sin_port==0)
 		{
-			J2.sin_port=adresse_expediteur.sin_port;
-			J2.sin_family=adresse_expediteur.sin_family;
+			sock2.sin_port=adresse_expediteur.sin_port;
+			sock2.sin_family=adresse_expediteur.sin_family;
 
 			inet_ntoa(adresse_expediteur.sin_addr),
 			ntohs(adresse_expediteur.sin_port));
