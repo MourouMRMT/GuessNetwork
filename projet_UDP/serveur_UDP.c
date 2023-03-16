@@ -134,8 +134,8 @@ void begin(char *chaine)
 }
 void jeu(char *chaine)
 {
-		strcpy(chaine,questions[1].question);
-		//strcpy(chaine,"bite");
+		//strcpy(chaine,questions[1].question);
+		strcpy(chaine,"bite");
 		
 		if(strcmp("A",chaine)==0)
         {
