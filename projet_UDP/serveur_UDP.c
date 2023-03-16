@@ -88,7 +88,7 @@ main (int argc, char **argv) {
                 perror("ERREUR-sendto ");
             }
             else {
-                printf("ENVOI %d octets\n", strlen(message)+1);
+                printf("ENVOI %ld octets\n", strlen(message)+1);
                 printf("\t%s\n",message);
                 }
 
