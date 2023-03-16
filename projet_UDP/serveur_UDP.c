@@ -8,7 +8,7 @@ void jeu (char *chaine);
 int flag=0;
 int *num_q=0;
 
-main (int argc, char **argv) {
+int main (int argc, char **argv) {
 
     /*---------------------------------------------- les variables */
 
