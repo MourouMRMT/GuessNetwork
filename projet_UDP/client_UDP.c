@@ -4,7 +4,7 @@
 #include "QCM.h"
 
 
-void reponse(char *chaine);
+void reponse(char* chaine_recu,char *chaine);
 
 int main (int argc, char **argv)
 {
