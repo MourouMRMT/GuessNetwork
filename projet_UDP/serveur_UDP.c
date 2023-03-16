@@ -94,6 +94,7 @@ int main (int argc, char **argv) {
             else {
                 printf("ENVOI %ld octets\n", strlen(message)+1);
                 printf("\t%s\n",message);
+                printf("\t%f\n",flag);
                 }
 
         }
