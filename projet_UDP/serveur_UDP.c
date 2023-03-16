@@ -116,7 +116,7 @@ void begin(char *chaine)
 		if(strcmp(questions[num_q].correctOption,chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
-			if(num_q==NUM_QUESTIONS)
+			if(num_q==NUM_QUESTIONS-1)
 			{
 				num_q=0;
 			}else{num_q++;}
