@@ -111,10 +111,10 @@ void begin(char *chaine)
 {
     if(strcmp("oui",chaine)==0)
 	{
-		strcpy(chaine,questions[0].question);
+		strcpy(chaine,questions[1].question);
 		//strcpy(chaine,"bite");
 		
-		if(strcmp(questions[0].correctOption,chaine)==0)
+		if(strcmp(questions[1].correctOption,chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
 			
