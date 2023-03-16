@@ -115,12 +115,12 @@ void reponse(char *chaine) {
 	}
 }
 void begin(char *chaine)
-{
+{flag=2;
     if(strcmp("oui",chaine)==0)
 	{
 		//strcpy(chaine,&questions[1].question);
 		//strcpy(chaine,"bite");
-		flag=2;
+		//flag=2;
 		/*if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
