@@ -142,6 +142,7 @@ void reponse(char *chaine) {
 }
 void begin1(char *chaine)
 {
+	printf("popo");
 	int valide=0;
     if(strcmp("oui",chaine)==0){valide=1;}
 	if(valide==1)
@@ -161,12 +162,12 @@ void begin1(char *chaine)
         {
             strcpy(chaine,"GG tu as WIN!");
         }
-	}
 
 }
 
 void begin2(char *chaine)
 {
+	printf("pipi");
 	int valide=0;
     if(strcmp("oui",chaine)==0){valide=1;}
 	if(valide==1)
