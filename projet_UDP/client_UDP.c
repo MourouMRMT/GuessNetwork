@@ -64,7 +64,7 @@ int main (int argc, char **argv)
     {
         /* lecture d'une ligne au clavier */
 		reponse(recu,envoyer);
-		getchar();
+		//getchar();
 
 	
         /* envoi d'un bloc d'octets */
@@ -114,6 +114,7 @@ void reponse(char* chaine_recu,char *chaine)
 	if(strcmp("oui",chaine_recu)==0)
 	{
 		printf("%s",questions[1].question);
+		strcpy(chaine_recu," ");
 	}else
 	{
 	    printf ("Que faut-il envoyer ? \n\t");
