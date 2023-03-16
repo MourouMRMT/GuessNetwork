@@ -10,13 +10,17 @@ int flag=0;
 struct sockaddr_in adresse_expediteur;
 struct sockaddr_in sock1;
 struct sockaddr_in sock2;
+int point_acces_serveur;
+int recus, emis;
+char message[100];
+
 main (int argc, char **argv) {
 
     /*---------------------------------------------- les variables */
 
         /* pour le serveur */
     struct sockaddr_in adUDP_serveur;   /* pour mettre l'adresse de son point d'accès */
-    int point_acces_serveur;
+    
 
         /* pour le service */
 
@@ -33,9 +37,7 @@ main (int argc, char **argv) {
 #else
     socklen_t lg_expediteur;
 #endif
-    char message[100];
-    int recus, emis;
-
+    
         /* divers */
     int retour;
 
