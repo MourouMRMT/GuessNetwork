@@ -112,7 +112,7 @@ void reponse(char* chaine_recu,char *chaine)
 {
 	if(strcmp("oui",chaine_recu)==0)
 	{
-		printf("%s",&questions[1].question);
+		printf("%s",questions[1].question);
 	}else
 	{
 	    printf ("Que faut-il envoyer ? \n\t");
