@@ -4,15 +4,8 @@
 #include "QCM.h"
 void begin (char *chaine);
 void reponse (char *chaine);
-int J=0;
 int flag=0;
 
-struct sockaddr_in adresse_expediteur;
-struct sockaddr_in sock1;
-struct sockaddr_in sock2;
-int point_acces_serveur;
-int recus, emis;
-char message[100];
 
 main (int argc, char **argv) {
 
@@ -20,24 +13,18 @@ main (int argc, char **argv) {
 
         /* pour le serveur */
     struct sockaddr_in adUDP_serveur;   /* pour mettre l'adresse de son point d'accès */
-    
+    int point_acces_serveur;
 
         /* pour le service */
-
-	
-	sock1.sin_family=0;
-	sock1.sin_port=0;
-	sock1.sin_addr.s_addr=0;
-	
-	sock2.sin_family=0;
-	sock2.sin_port=0;
-	sock2.sin_addr.s_addr=0;
+    struct sockaddr_in adresse_expediteur;
 #ifdef  __osf__
     int lg_expediteur;
 #else
     socklen_t lg_expediteur;
 #endif
-    
+    char message[100];
+    int recus, emis;
+
         /* divers */
     int retour;
 
@@ -84,15 +71,15 @@ main (int argc, char **argv) {
                 inet_ntoa(adresse_expediteur.sin_addr),
                 ntohs(adresse_expediteur.sin_port));
             printf("\t%s\n",message);
-			
+
                 /* on calcule la réponse */
-			if( flag!=1){reponse(message);}
-            else{
-				begin1(message);
-				begin2(message);
-			}
+            switch(flag)
+            {
+                case 0:reponse(message);
+                case 1:begin(message);
+            }
                 /* et on lui renvoie */
- /*           emis =  sendto (point_acces_serveur,
+            emis =  sendto (point_acces_serveur,
                 message, strlen(message)+1, 0,
                 (struct sockaddr *) &adresse_expediteur, sizeof(adresse_expediteur));
             if (emis < 0) {
@@ -102,88 +89,30 @@ main (int argc, char **argv) {
                 printf("ENVOI %d octets\n", strlen(message)+1);
                 printf("\t%s\n",message);
                 }
-*/
+
         }
 
     }
-
+}
 
 void reponse(char *chaine) {
 
     if (strcmp("begin",chaine)==0)
     {
-		if(sock1.sin_port==0)
-		{
-			sock1.sin_port=adresse_expediteur.sin_port;
-			sock1.sin_family=adresse_expediteur.sin_family;
-
-			inet_ntoa(adresse_expediteur.sin_addr),
-			ntohs(adresse_expediteur.sin_port);
-			//strcpy(message,"1");
-			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
-			//J=1;
-		}else if(adresse_expediteur.sin_port!=sock1.sin_port && sock2.sin_port==0)
-		{
-			sock2.sin_port=adresse_expediteur.sin_port;
-			sock2.sin_family=adresse_expediteur.sin_family;
-
-			inet_ntoa(adresse_expediteur.sin_addr),
-			ntohs(adresse_expediteur.sin_port);
-			//strcpy(message,"1");
-			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
-			flag=1;
-		}
-		
+		strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
+		flag=1;
 	}
     else
     {
 		strcpy(chaine,"Commencez le jeu en saisissant begin ");
 	}
 }
-void begin1(char *chaine)
+void begin(char *chaine)
 {
-	printf("popo");
-	int valide=0;
-    if(strcmp("oui",chaine)==0){valide=1;}
-	if(valide==1)
+    if(strcmp("oui",chaine)==0)
 	{
 		strcpy(chaine,questions[1].question);
-		emis =  sendto (point_acces_serveur,
-                message, strlen(message)+1, 0,
-                (struct sockaddr *) &adresse_expediteur, sizeof(adresse_expediteur));
-		if (emis < 0) {
-			perror("ERREUR-sendto ");
-		}
-		else {
-			printf("ENVOI %d octets\n", strlen(message)+1);
-			printf("\t%s\n",message);
-			}
-		if(strcmp("A",chaine)==0)
-        {
-            strcpy(chaine,"GG tu as WIN!");
-			system(exit);
-        }
 
-}
-
-void begin2(char *chaine)
-{
-	printf("pipi");
-	int valide=0;
-    if(strcmp("oui",chaine)==0){valide=1;}
-	if(valide==1)
-	{
-		strcpy(chaine,questions[1].question);
-		emis =  sendto (point_acces_serveur,
-                message, strlen(message)+1, 0,
-                (struct sockaddr *) &adresse_expediteur, sizeof(adresse_expediteur));
-		if (emis < 0) {
-			perror("ERREUR-sendto ");
-		}
-		else {
-			printf("ENVOI %d octets\n", strlen(message)+1);
-			printf("\t%s\n",message);
-			}
 		if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
@@ -191,4 +120,3 @@ void begin2(char *chaine)
 	}
 
 }
-
