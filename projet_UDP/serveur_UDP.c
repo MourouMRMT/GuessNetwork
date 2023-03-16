@@ -5,7 +5,7 @@
 void begin (char *chaine);
 void reponse (char *chaine);
 int flag=0;
-int num_q=0;
+int *num_q=0;
 
 main (int argc, char **argv) {
 
@@ -111,15 +111,15 @@ void begin(char *chaine)
 {
     if(strcmp("oui",chaine)==0)
 	{
-		strcpy(chaine,questions[1].question);
+		strcpy(chaine,questions[*num_q].question);
 		
-		if(strcmp(questions[1].correctOption,chaine)==0)
+		if(strcmp(questions[*num_q].correctOption,chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
 			if(num_q==(NUM_QUESTIONS-1))
 			{
-				num_q=0;
-			}else{num_q++;}
+				*num_q=0;
+			}else{*num_q++;}
         }else{strcpy(chaine,"essaie encore...");}
 	}
 
