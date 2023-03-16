@@ -22,7 +22,7 @@ main (int argc, char **argv) {
 #else
     socklen_t lg_expediteur;
 #endif
-    char message[100];
+    char message[200];
     int recus, emis;
 
         /* divers */
@@ -111,15 +111,12 @@ void begin(char *chaine)
 {
     if(strcmp("oui",chaine)==0)
 	{
-		strcpy(chaine,questions[1].question);
+		strcpy(chaine,questions[0].question);
 		
-		if(strcmp("A",chaine)==0)
+		if(strcmp(questions[0].correctOption,chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
-			if(num_q==(NUM_QUESTIONS-1))
-			{
-				*num_q=0;
-			}else{*num_q++;}
+			
         }else{strcpy(chaine,"essaie encore...");}
 	}
 
