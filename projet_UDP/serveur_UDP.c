@@ -22,7 +22,7 @@ main (int argc, char **argv) {
 #else
     socklen_t lg_expediteur;
 #endif
-    char message[200];
+    char message[500];
     int recus, emis;
 
         /* divers */
