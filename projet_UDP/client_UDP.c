@@ -27,7 +27,7 @@ main (int argc, char **argv)
 #else
     socklen_t lg_expediteur;
 #endif
-    char recu[100];
+    char recu[500];
     int recus;
 
     /*---------------------------------------------- l'algorithme */
