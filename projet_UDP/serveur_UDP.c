@@ -4,7 +4,7 @@
 #include "QCM.h"
 void begin (char *chaine);
 void reponse (char *chaine);
-int flag=0;
+int J=0;
 
 
 main (int argc, char **argv) {
@@ -83,12 +83,11 @@ main (int argc, char **argv) {
             printf("\t%s\n",message);/*
 			
                 /* on calcule la réponse */
-            switch(flag)
-            {
-                case 0:reponse(message);
-                case 1:begin1(message);
+			if( flag!=1){reponse(message);}
+            else{
+				case 1:begin1(message);
 				case 2:begin2(message);
-            }
+			}
                 /* et on lui renvoie */
             emis =  sendto (point_acces_serveur,
                 message, strlen(message)+1, 0,
@@ -119,7 +118,7 @@ void reponse(char *chaine) {
 			ntohs(adresse_expediteur.sin_port));
 			//strcpy(message,"1");
 			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
-			flag=1;
+			//J=1;
 		}else if(adresse_expediteur.sin_port!=J1.sin_port && J2.sin_port==0)
 		{
 			J2.sin_port=adresse_expediteur.sin_port;
@@ -129,9 +128,9 @@ void reponse(char *chaine) {
 			ntohs(adresse_expediteur.sin_port));
 			//strcpy(message,"1");
 			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
-			flag=2;
+			flag=1;
 		}
-
+		
 	}
     else
     {
