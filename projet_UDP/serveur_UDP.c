@@ -79,11 +79,11 @@ main (int argc, char **argv) {
         if (recus < 0) {
             perror("ERREUR-recvfrom ");
         }
-        /*else {
+        else {
             printf("RECU %d octets de %s:%d\n", recus,
                 inet_ntoa(adresse_expediteur.sin_addr),
                 ntohs(adresse_expediteur.sin_port));
-            printf("\t%s\n",message);/*
+            printf("\t%s\n",message);
 			
                 /* on calcule la réponse */
 			if( flag!=1){reponse(message);}
