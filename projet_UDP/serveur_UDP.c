@@ -161,7 +161,7 @@ void begin1(char *chaine)
 		if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
-			system(exit);
+			exit(0);
         }
 
 }
