@@ -113,14 +113,14 @@ void begin(char *chaine)
 	{
 		strcpy(chaine,questions[num_q].question);
 		
-		if(strcmp("A",chaine)==0)
+		if(strcmp(questions[num_q].correctOption,chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
 			if(num_q==NUM_QUESTIONS)
 			{
 				num_q=0;
 			}else{num_q++;}
-        }
+        }else{strcpy(chaine,"essaie encore...");}
 	}
 
 }
