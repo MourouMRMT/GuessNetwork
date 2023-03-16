@@ -112,6 +112,7 @@ void begin(char *chaine)
     if(strcmp("oui",chaine)==0)
 	{
 		strcpy(chaine,questions[0].question);
+		strcpy(chaine,"bite");
 		
 		if(strcmp(questions[0].correctOption,chaine)==0)
         {
