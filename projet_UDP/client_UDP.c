@@ -64,6 +64,7 @@ int main (int argc, char **argv)
     {
         /* lecture d'une ligne au clavier */
 		reponse(recu,envoyer);
+		getchar();
 
 	
         /* envoi d'un bloc d'octets */
