@@ -165,7 +165,7 @@ void begin1(char *chaine)
 
 }
 
-void begin1(char *chaine)
+void begin2(char *chaine)
 {
 	int valide=0;
     if(strcmp("oui",chaine)==0){valide=1;}
