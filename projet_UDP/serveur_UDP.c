@@ -112,11 +112,6 @@ void begin(char *chaine)
     if(strcmp("oui",chaine)==0)
 	{
 		strcpy(chaine,questions[1].question);
-		strcpy(chaine,"Choisissez votre reponse entre A B C ou D : ");
-		strcpy(chaine,questions[1].optionA);
-		strcpy(chaine,questions[1].optionB);
-		strcpy(chaine,questions[1].optionC);
-		strcpy(chaine,questions[1].optionD);
 		
 		if(strcmp("A",chaine)==0)
         {
