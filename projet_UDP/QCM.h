@@ -12,7 +12,7 @@ Question questions[NUM_QUESTIONS] = {
   },
   {
     "What is the currency of Japan?\nA:Yen\n B:Dollar\nC:Euro\nD:Won\nChoisissez votre reponse parmi A B C ou D\n",
-    "A"
+    'A'
   },
   // Add more questions here
 };
