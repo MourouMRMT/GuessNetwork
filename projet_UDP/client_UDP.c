@@ -96,6 +96,7 @@ int main (int argc, char **argv)
             {
                 printf ("RECU  %d octets\n", recus);
                 printf ("\t%s\n", recu);
+				strcpy(chaine_recu,"none");
             }
         }
 		
@@ -114,7 +115,7 @@ void reponse(char* chaine_recu,char *chaine)
 	if(strcmp("oui",chaine_recu)==0)
 	{
 		printf("%s",questions[1].question);
-		strcpy(chaine_recu,"none");
+		
 	}else
 	{
 	    printf ("Que faut-il envoyer ? \n\t");
