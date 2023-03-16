@@ -82,7 +82,7 @@ int main (int argc, char **argv) {
 					begin(message);
 				case 2:
 					jeu(message);
-				default:flag=3;
+				default:flag=3,reponse(message);
             }
                 /* et on lui renvoie */
             emis =  sendto (point_acces_serveur,
