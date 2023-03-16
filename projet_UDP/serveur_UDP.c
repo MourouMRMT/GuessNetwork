@@ -23,7 +23,7 @@ int main (int argc, char **argv) {
 #else
     socklen_t lg_expediteur;
 #endif
-    char message[500];
+    char message[100];
     int recus, emis;
 
         /* divers */
@@ -76,9 +76,13 @@ int main (int argc, char **argv) {
                 /* on calcule la réponse */
             switch(flag)
             {
-                case 0:reponse(message);
-                case 1:begin(message);
-				case 2:jeu(message);
+                case 0:
+					reponse(message);
+                case 1:
+					begin(message);
+				case 2:
+					jeu(message);
+				default:flag=0;
             }
                 /* et on lui renvoie */
             emis =  sendto (point_acces_serveur,
