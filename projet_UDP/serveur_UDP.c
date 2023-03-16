@@ -80,8 +80,8 @@ int main (int argc, char **argv) {
 					reponse(message);
                 case 1:
 					begin(message);
-				case 2:
-					jeu(message);
+				//case 2:
+					//jeu(message);
 				default:
 					flag=3;
 					reponse(message);
@@ -122,7 +122,8 @@ void begin(char *chaine)
 	{
 		//strcpy(chaine,&questions[1].question);
 		strcpy(chaine,"bite");
-		flag=2;
+		//flag=2;
+		jeu(chaine);
 		/*if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
