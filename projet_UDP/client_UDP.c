@@ -60,7 +60,7 @@ main (int argc, char **argv)
     while(1)
     {
         /* lecture d'une ligne au clavier */
-        printf ("Que faut-il envoyer ? \n\t");
+        printf ("Se connecter ? [0/N]\n\t");
         scanf("%99[^\n]",envoyer);
         getchar();
 	

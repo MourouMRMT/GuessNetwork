@@ -17,6 +17,16 @@ main (int argc, char **argv) {
 
         /* pour le service */
     struct sockaddr_in adresse_expediteur;
+    struct sockaddr_in sock1;
+    struct sockaddr_in sock2;
+	
+	sock1.sin_family=0;
+	sock1.sin_port=0;
+	sock1.sin_addr.s_addr=0;
+	
+	sock2.sin_family=0;
+	sock2.sin_port=0;
+	sock2.sin_addr.s_addr=0;
 #ifdef  __osf__
     int lg_expediteur;
 #else
@@ -66,17 +76,18 @@ main (int argc, char **argv) {
         if (recus < 0) {
             perror("ERREUR-recvfrom ");
         }
-        else {
+        /*else {
             printf("RECU %d octets de %s:%d\n", recus,
                 inet_ntoa(adresse_expediteur.sin_addr),
                 ntohs(adresse_expediteur.sin_port));
-            printf("\t%s\n",message);
-
+            printf("\t%s\n",message);/*
+			
                 /* on calcule la réponse */
             switch(flag)
             {
                 case 0:reponse(message);
-                case 1:begin(message);
+                case 1:begin1(message);
+				case 2:begin2(message);
             }
                 /* et on lui renvoie */
             emis =  sendto (point_acces_serveur,
@@ -99,15 +110,35 @@ void reponse(char *chaine) {
 
     if (strcmp("begin",chaine)==0)
     {
-		strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
-		flag=1;
+		if(J1.sin_port==0)
+		{
+			J1.sin_port=adresse_expediteur.sin_port;
+			J1.sin_family=adresse_expediteur.sin_family;
+
+			inet_ntoa(adresse_expediteur.sin_addr),
+			ntohs(adresse_expediteur.sin_port));
+			//strcpy(message,"1");
+			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
+			flag=1;
+		}else if(adresse_expediteur.sin_port!=J1.sin_port && J2.sin_port==0)
+		{
+			J2.sin_port=adresse_expediteur.sin_port;
+			J2.sin_family=adresse_expediteur.sin_family;
+
+			inet_ntoa(adresse_expediteur.sin_addr),
+			ntohs(adresse_expediteur.sin_port));
+			//strcpy(message,"1");
+			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
+			flag=2;
+		}
+
 	}
     else
     {
 		strcpy(chaine,"Commencez le jeu en saisissant begin ");
 	}
 }
-void begin(char *chaine)
+void begin1(char *chaine)
 {
     if(strcmp("oui",chaine)==0)
 	{
@@ -120,3 +151,18 @@ void begin(char *chaine)
 	}
 
 }
+
+void begin1(char *chaine)
+{
+    if(strcmp("oui",chaine)==0)
+	{
+		strcpy(chaine,questions[1].question);
+
+		if(strcmp("A",chaine)==0)
+        {
+            strcpy(chaine,"GG tu as WIN!");
+        }
+	}
+
+}
+
