@@ -116,7 +116,7 @@ void reponse(char *chaine) {
 			sock1.sin_family=adresse_expediteur.sin_family;
 
 			inet_ntoa(adresse_expediteur.sin_addr),
-			ntohs(adresse_expediteur.sin_port));
+			ntohs(adresse_expediteur.sin_port);
 			//strcpy(message,"1");
 			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
 			//J=1;
@@ -126,7 +126,7 @@ void reponse(char *chaine) {
 			sock2.sin_family=adresse_expediteur.sin_family;
 
 			inet_ntoa(adresse_expediteur.sin_addr),
-			ntohs(adresse_expediteur.sin_port));
+			ntohs(adresse_expediteur.sin_port);
 			//strcpy(message,"1");
 			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
 			flag=1;
