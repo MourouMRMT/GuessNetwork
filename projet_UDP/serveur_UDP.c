@@ -83,7 +83,7 @@ int main (int argc, char **argv) {
 				//case 2:
 					//jeu(message);
 				default:
-					flag=3;
+					//flag=3;
 					reponse(message);
             }
                 /* et on lui renvoie */
