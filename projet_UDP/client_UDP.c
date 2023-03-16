@@ -96,7 +96,7 @@ int main (int argc, char **argv)
             {
                 printf ("RECU  %d octets\n", recus);
                 printf ("\t%s\n", recu);
-				strcpy(chaine_recu,"none");
+				strcpy(recus,"none");
             }
         }
 		
