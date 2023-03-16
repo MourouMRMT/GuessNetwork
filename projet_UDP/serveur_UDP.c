@@ -80,8 +80,8 @@ int main (int argc, char **argv) {
 					reponse(message);
                 case 1:
 					begin(message);
-				//case 2:
-					//jeu(message);
+				case 2:
+					jeu(message);
 				//default:
 					//flag=3;
 					//reponse(message);
