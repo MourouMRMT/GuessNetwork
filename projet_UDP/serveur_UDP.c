@@ -114,7 +114,7 @@ void begin(char *chaine)
 		strcpy(chaine,questions[1].question);
 		//strcpy(chaine,"bite");
 		
-		if(strcmp(questions[1].correctOption,chaine)==0)
+		if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
 			
