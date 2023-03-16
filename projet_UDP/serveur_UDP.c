@@ -121,9 +121,9 @@ void begin(char *chaine)
     if(strcmp("oui",chaine)==0)
 	{
 		//strcpy(chaine,&questions[1].question);
-		//strcpy(chaine,"oui");
-		//flag=2;
-		jeu(chaine);
+		strcpy(chaine,"GIga bite");
+		flag=2;
+		//jeu(chaine);
 		if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
