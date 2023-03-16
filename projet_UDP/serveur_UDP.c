@@ -85,11 +85,11 @@ main (int argc, char **argv) {
                 /* on calcule la réponse */
 			if( flag!=1){reponse(message);}
             else{
-				case 1:begin1(message);
-				case 2:begin2(message);
+				begin1(message);
+				begin2(message);
 			}
                 /* et on lui renvoie */
-            emis =  sendto (point_acces_serveur,
+ /*           emis =  sendto (point_acces_serveur,
                 message, strlen(message)+1, 0,
                 (struct sockaddr *) &adresse_expediteur, sizeof(adresse_expediteur));
             if (emis < 0) {
@@ -99,7 +99,7 @@ main (int argc, char **argv) {
                 printf("ENVOI %d octets\n", strlen(message)+1);
                 printf("\t%s\n",message);
                 }
-
+*/
         }
 
     }
@@ -139,10 +139,21 @@ void reponse(char *chaine) {
 }
 void begin1(char *chaine)
 {
-    if(strcmp("oui",chaine)==0)
+	int valide=0;
+    if(strcmp("oui",chaine)==0){valide=1;}
+	if(valide==1)
 	{
 		strcpy(chaine,questions[1].question);
-
+		emis =  sendto (point_acces_serveur,
+                message, strlen(message)+1, 0,
+                (struct sockaddr *) &adresse_expediteur, sizeof(adresse_expediteur));
+		if (emis < 0) {
+			perror("ERREUR-sendto ");
+		}
+		else {
+			printf("ENVOI %d octets\n", strlen(message)+1);
+			printf("\t%s\n",message);
+			}
 		if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
@@ -153,10 +164,21 @@ void begin1(char *chaine)
 
 void begin1(char *chaine)
 {
-    if(strcmp("oui",chaine)==0)
+	int valide=0;
+    if(strcmp("oui",chaine)==0){valide=1;}
+	if(valide==1)
 	{
 		strcpy(chaine,questions[1].question);
-
+		emis =  sendto (point_acces_serveur,
+                message, strlen(message)+1, 0,
+                (struct sockaddr *) &adresse_expediteur, sizeof(adresse_expediteur));
+		if (emis < 0) {
+			perror("ERREUR-sendto ");
+		}
+		else {
+			printf("ENVOI %d octets\n", strlen(message)+1);
+			printf("\t%s\n",message);
+			}
 		if(strcmp("A",chaine)==0)
         {
             strcpy(chaine,"GG tu as WIN!");
