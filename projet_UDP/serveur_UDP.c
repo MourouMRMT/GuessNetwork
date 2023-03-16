@@ -4,6 +4,7 @@
 #include "QCM.h"
 void begin (char *chaine);
 void reponse (char *chaine);
+void jeu (char *chaine);
 int flag=0;
 int *num_q=0;
 
