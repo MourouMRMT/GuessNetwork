@@ -133,7 +133,7 @@ void begin(char *chaine)
 	}
 	char str[12];
 	sprintf(str, "%s", &questions[1].correctOption);
-	printf("%s",str);
+	printf("%s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
