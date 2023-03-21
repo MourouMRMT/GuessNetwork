@@ -5,7 +5,7 @@
 
 int flag=0;
 void reponse(char* chaine_recu,char *chaine);
-
+void jeu(char* chaine_recu,char *chaine);
 int main (int argc, char **argv)
 {
 
