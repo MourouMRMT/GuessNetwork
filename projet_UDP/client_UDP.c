@@ -137,10 +137,10 @@ void jeu(char* chaine_recu,char *chaine)
         scanf("%99[^\n]",chaine);
 		getchar();
 		
-		if(strcmp("A",chaine)==0)
-		{
-			printf("%s\n","GG tu as WIN!");
+		// if(strcmp("A",chaine)==0)
+		// {
+			// printf("%s\n","GG tu as WIN!");
 			
-		}
+		// }
 	}
 }
