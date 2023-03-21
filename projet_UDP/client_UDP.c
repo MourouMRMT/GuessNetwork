@@ -129,10 +129,12 @@ void reponse(char* chaine_recu,char *chaine)
 
 void jeu(char* chaine_recu,char *chaine)
 {
+	if(flag==1){
 		printf("%s",questions[1].question);
 		//strcpy(chaine,"reponse");
 		
 	    printf ("Que faut-il envoyer ? \n\t");
         scanf("%99[^\n]",chaine);
-        getchar();
+		getchar();
+	}
 }
