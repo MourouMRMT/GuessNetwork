@@ -125,7 +125,7 @@ void begin(char *chaine)
 		printf("%s\n","begin");
 		flag++;
 		//jeu(chaine);
-		if(strcmp("reponse",chaine)==0)
+		//if(strcmp("reponse",chaine)==0)
 		
 			
 		if(strcmp("A",chaine)==0)
@@ -135,17 +135,5 @@ void begin(char *chaine)
 		}
 		
 	}
-
-}
-void jeu(char *chaine)
-{
-		//strcpy(chaine,questions[1].question);
-		printf("%s\n","jeu");
-		
-		if(strcmp("A",chaine)==0)
-        {
-            strcpy(chaine,"GG tu as WIN!");
-			
-        }else{strcpy(chaine,"hehe encore...");}
 
 }

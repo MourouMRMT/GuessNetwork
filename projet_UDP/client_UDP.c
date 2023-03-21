@@ -114,7 +114,7 @@ void reponse(char* chaine_recu,char *chaine)
 	if(strcmp("oui",chaine_recu)==0)
 	{
 		printf("%s",questions[1].question);
-		strcpy(chaine,"reponse");
+		//strcpy(chaine,"reponse");
 		
 	}else
 	{
