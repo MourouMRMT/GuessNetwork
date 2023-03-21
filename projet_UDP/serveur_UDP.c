@@ -132,7 +132,7 @@ void begin(char *chaine)
 		
 	}
 	char str[12];
-	sprintf(str, "%d", questions[1].correctOption);
+	sprintf(str, "%s", questions[1].correctOption);
 	printf("%s",str);
 	if(strcmp(str,chaine)==0)
 	{
