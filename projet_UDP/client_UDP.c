@@ -3,7 +3,7 @@
 #include "commun.h"
 #include "QCM.h"
 
-
+int flag=0;
 void reponse(char* chaine_recu,char *chaine);
 
 int main (int argc, char **argv)
@@ -63,8 +63,11 @@ int main (int argc, char **argv)
     while(1)
     {
         /* lecture d'une ligne au clavier */
-		reponse(recu,envoyer);
-		//getchar();
+		switch(flag)
+		{
+			case 0:reponse(recu,envoyer)
+			case 1:jeu(recu,envoyer);
+		}//getchar();
 
 	
         /* envoi d'un bloc d'octets */
@@ -113,8 +116,7 @@ void reponse(char* chaine_recu,char *chaine)
 {
 	if(strcmp("oui",chaine_recu)==0)
 	{
-		printf("%s",questions[1].question);
-		//strcpy(chaine,"reponse");
+		flag=1;
 		
 	}else
 	{
@@ -122,4 +124,14 @@ void reponse(char* chaine_recu,char *chaine)
         scanf("%99[^\n]",chaine);
         getchar();
 	}
+}
+
+void jeu(char* chaine_recu,char *chaine)
+{
+		printf("%s",questions[1].question);
+		//strcpy(chaine,"reponse");
+		
+	    printf ("Que faut-il envoyer ? \n\t");
+        scanf("%99[^\n]",chaine);
+        getchar();
 }
