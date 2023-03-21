@@ -136,5 +136,11 @@ void jeu(char* chaine_recu,char *chaine)
 	    printf ("Que faut-il envoyer ? \n\t");
         scanf("%99[^\n]",chaine);
 		getchar();
+		
+		if(strcmp("A",chaine)==0)
+		{
+			print("%s\n","GG tu as WIN!");
+			
+		}
 	}
 }
