@@ -139,7 +139,7 @@ void jeu(char* chaine_recu,char *chaine)
 		
 		if(strcmp("A",chaine)==0)
 		{
-			print("%s\n","GG tu as WIN!");
+			printf("%s\n","GG tu as WIN!");
 			
 		}
 	}
