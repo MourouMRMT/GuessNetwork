@@ -109,7 +109,7 @@ void reponse(char *chaine) {
     if (strcmp("begin",chaine)==0)
     {
 		strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
-		flag++;
+		flag=1;
 	}
     else
     {

@@ -99,6 +99,7 @@ int main (int argc, char **argv)
             {
                 printf ("RECU  %d octets\n", recus);
                 printf ("\t%s\n", recu);
+				printf("\t%d\n",flag);
             }
         }
 		
