@@ -65,7 +65,7 @@ int main (int argc, char **argv)
         /* lecture d'une ligne au clavier */
 		switch(flag)
 		{
-			case 0:reponse(recu,envoyer)
+			case 0:reponse(recu,envoyer);
 			case 1:jeu(recu,envoyer);
 		}//getchar();
 
