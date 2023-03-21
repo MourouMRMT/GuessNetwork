@@ -131,7 +131,7 @@ void begin(char *chaine)
 
 		
 	}
-	if(strcmp("A",chaine)==0)
+	if(strcmp(questions[1].correctOption,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
 		
