@@ -131,11 +131,11 @@ void begin(char *chaine)
 		//flag=1;
 		//jeu(chaine);
 		//if(strcmp("reponse",chaine)==0)
-		// rnd = 0 + (rand() % (NUM_QUESTIONS-1-0));
-		// char rando[5];
-		// sprintf(rando, "%ls", &rnd);
-		// printf("**index: %s **",rando);
-		// strcpy(chaine,rando);
+		rnd =(rand() % (21));
+		char rando[5];
+		sprintf(rando, "%ls", &rnd);
+		printf("**index: %s **",rando);
+		//strcpy(chaine,rando);
 			
 	}
 	char str[12];
