@@ -10,6 +10,18 @@ int *num_q=0;
 int rnd=0;
 char str[12];
 
+int random_number(int lower, int upper) {
+    int num;
+    srand(time(0)); // Initialise le générateur de nombres aléatoires
+
+    // Génère un nombre aléatoire entre les bornes inférieure et supérieure
+    num = (rand() % (upper - lower + 1)) + lower;
+
+    return num;
+}
+
+
+
 int main (int argc, char **argv) {
 
     /*---------------------------------------------- les variables */
@@ -134,7 +146,7 @@ void begin(char *chaine)
 		//flag=1;
 		//jeu(chaine);
 		//if(strcmp("reponse",chaine)==0)
-		rnd =1+ random() % (11 + 1 - 1);
+		rnd =random_number(0,21);
 		int rando[5];
 		sprintf(rando, "%d", &rnd);
 		printf("**index: %d **\n",rnd);
