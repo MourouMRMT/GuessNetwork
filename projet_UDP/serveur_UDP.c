@@ -118,8 +118,11 @@ void reponse(char *chaine) {
 }
 void begin(char *chaine)
 {
-	char cpt=0;
-	
+	//char cpt=0;
+	int rnd = 0 + (rand() % (NUM_QUESTIONS-1-0));
+	char rand[5];
+	sprintf(rand, "%s", &rnd);
+	strcpy(chaine,rand);
     if(strcmp("oui",chaine)==0)
 	{
 		//strcpy(chaine,&questions[1].question);
@@ -134,14 +137,15 @@ void begin(char *chaine)
 		
 	}
 	char str[12];
-	sprintf(str, "%s", &questions[1].correctOption);
+	sprintf(str, "%s", &questions[rnd].correctOption);
 	printf("%s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
 		
-	}else{cpt++;}
+	}
+	/*else{cpt++;}
 	
-	if(cpt==2){strcpy(chaine,"Debile");}
+	if(cpt==2){strcpy(chaine,"Debile");}*/
 
 }

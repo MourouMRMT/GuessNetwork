@@ -129,18 +129,13 @@ void reponse(char* chaine_recu,char *chaine)
 
 void jeu(char* chaine_recu,char *chaine)
 {
+	int index=atoi(chaine_recu);
 	if(flag==1){
-		printf("%s",questions[1].question);
-		//strcpy(chaine,"reponse");
+		printf("%s",questions[index].question);
 		
 	    printf ("Que faut-il envoyer ? \n\t");
         scanf("%99[^\n]",chaine);
 		getchar();
 		
-		// if(strcmp("A",chaine)==0)
-		// {
-			// printf("%s\n","GG tu as WIN!");
-			
-		// }
 	}
 }
