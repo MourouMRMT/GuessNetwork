@@ -67,7 +67,7 @@ int main (int argc, char **argv)
 		{
 			case 0:reponse(recu,envoyer);
 			case 1:jeu(recu,envoyer);
-			default:flag=0;
+			//default:flag=0;
 		}//getchar();
 
 	
