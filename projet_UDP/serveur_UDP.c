@@ -131,17 +131,17 @@ void begin(char *chaine)
 		//flag=1;
 		//jeu(chaine);
 		//if(strcmp("reponse",chaine)==0)
-		rnd =(rand() % (21));
+		rnd =1-(rand() % (21));
 		int rando[5];
 		sprintf(rando, "%d", &rnd);
-		printf("**index: %d **",rnd);
+		printf("**index: %d **\n",rnd);
 		//strcpy(chaine,rando);
 		strcpy(chaine,questions[rnd].question);
 			
 	}
 	char str[12];
 	sprintf(str, "%s", &questions[rnd].correctOption);
-	printf("%s\n",str);
+	printf("reponse %s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
