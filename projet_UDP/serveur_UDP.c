@@ -8,6 +8,7 @@ void jeu (char *chaine);
 int flag=0;
 int *num_q=0;
 int rnd=0;
+char str[12];
 
 int main (int argc, char **argv) {
 
@@ -121,7 +122,7 @@ void reponse(char *chaine)
 }
 void begin(char *chaine)
 {	
-	char str[12];
+	
 	printf("on est dans begin\n");
 	//char cpt=0;
 
@@ -140,11 +141,11 @@ void begin(char *chaine)
 		//strcpy(chaine,rando);
 		strcpy(chaine,questions[rnd].question);
 		sprintf(str, "%s", &questions[rnd].correctOption);
-		printf("reponse %s\n",str);
+		
 			
 	}
 
-	
+	printf("reponse %s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
