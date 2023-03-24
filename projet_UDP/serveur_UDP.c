@@ -125,7 +125,7 @@ void begin(char *chaine)
 	int rnd = 0 + (rand() % (NUM_QUESTIONS-1-0));
 	char rand[5];
 	sprintf(rand, "%ls", &rnd);
-	printf("**index: %ls **",rand);
+	printf("**index: %s **",rand);
 	strcpy(chaine,rand);
     if(strcmp("oui",chaine)==0)
 	{

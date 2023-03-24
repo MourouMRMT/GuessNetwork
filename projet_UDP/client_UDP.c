@@ -132,7 +132,7 @@ void jeu(char* chaine_recu,char *chaine)
 {
 	printf("on est dans jeu");
 	int index=atoi(chaine_recu);
-	printf("**index: %ls **",index);
+	printf("**index: %d **",index);
 	if(flag==1){
 		printf("%s",questions[index].question);
 		
