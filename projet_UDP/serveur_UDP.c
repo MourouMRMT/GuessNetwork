@@ -120,6 +120,7 @@ void reponse(char *chaine)
 }
 void begin(char *chaine)
 {	int rnd=0;
+	char str[12];
 	printf("on est dans begin\n");
 	//char cpt=0;
 
@@ -137,10 +138,11 @@ void begin(char *chaine)
 		printf("**index: %d **\n",rnd);
 		//strcpy(chaine,rando);
 		strcpy(chaine,questions[rnd].question);
+		sprintf(str, "%s", &questions[rnd].correctOption);
 			
 	}
-	char str[12];
-	sprintf(str, "%s", &questions[rnd].correctOption);
+
+	
 	printf("reponse %s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
