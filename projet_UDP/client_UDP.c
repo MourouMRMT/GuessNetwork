@@ -115,6 +115,7 @@ int main (int argc, char **argv)
 
 void reponse(char* chaine_recu,char *chaine)
 {
+	printf("on est dans reponse");
 	if(strcmp("oui",chaine_recu)==0)
 	{
 		flag=1;
@@ -129,6 +130,7 @@ void reponse(char* chaine_recu,char *chaine)
 
 void jeu(char* chaine_recu,char *chaine)
 {
+	printf("on est dans jeu");
 	int index=atoi(chaine_recu);
 	printf("**index: %ls **",index);
 	if(flag==1){
