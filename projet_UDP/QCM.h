@@ -1,4 +1,4 @@
-#define NUM_QUESTIONS 2
+#define NUM_QUESTIONS 22
 
 typedef struct {
   char* question;
