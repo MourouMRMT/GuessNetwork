@@ -20,7 +20,7 @@ int main (int argc, char **argv)
     struct sockaddr_in adUDP_serveur;   /* pour mettre l'adresse de son point d'accès */
 
     /* pour l'envoi  */
-    char envoyer[100];
+    char envoyer[500];
     int emis;
 
     /* pour la réception  */
@@ -132,11 +132,11 @@ void reponse(char* chaine_recu,char *chaine)
 void jeu(char* chaine_recu,char *chaine)
 {
 	printf("on est dans jeu\n");
-
+	strcpy()
 	if(flag==1){
-		int index=atoi(chaine_recu);
-		printf("**index: %d **\n",index);
-		printf("%s",questions[index].question);
+		//int index=atoi(chaine_recu);
+		//printf("**index: %d **\n",index);
+		printf("%s",chaine_recu);
 		
 	    printf ("Que faut-il envoyer ? \n\t");
         scanf("%99[^\n]",chaine);

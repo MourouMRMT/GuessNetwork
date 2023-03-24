@@ -136,6 +136,7 @@ void begin(char *chaine)
 		sprintf(rando, "%ls", &rnd);
 		printf("**index: %s **",rando);
 		//strcpy(chaine,rando);
+		strcpy(chaine,&questions[rnd].question);
 			
 	}
 	char str[12];
