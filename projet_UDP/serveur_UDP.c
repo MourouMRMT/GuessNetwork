@@ -94,8 +94,6 @@ int main (int argc, char **argv) {
 					reponse(message);
                 case 1:
 					begin(message);
-				case 2:
-					reponse(message);
 				//default:
 					//flag=3;
 					//reponse(message);
@@ -131,11 +129,6 @@ void reponse(char *chaine)
     {
 		strcpy(chaine,"Commencez le jeu en saisissant begin ");
 	}
-	if(flag==2)
-	{
-		strcpy(chaine,"Voulez vous continuer ? (oui/non)");
-		flag=1;
-	}
 }
 void begin(char *chaine)
 {	
@@ -166,7 +159,7 @@ void begin(char *chaine)
 	if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
-		flag=2;
+		flag=0;
 		//strcpy(chaine,"oui");		
 	}
 	/*else{cpt++;}
