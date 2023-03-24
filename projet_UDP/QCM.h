@@ -8,7 +8,7 @@ typedef struct {
 Question questions[NUM_QUESTIONS] = {
 {"What is the capital of France?\n A:Paris\n B:Berlin\n C:Madrid\n D:London\n Choose your answer from A B C ou D\n",'A'},
 {"What is the currency of Japan?\n A:Yen\n B:Dollar\n C:Euro\n D:Won\n Choose your answer from A B C ou D\n",'A'},
-{ "Which country is the only one that is completely landlocked by another country?\n D:Lesotho\n A:Vatican City\n B:Liechtenstein\n C:Nepal\n Choose your answer from A B C or D\n", 'D' }
+{ "Which country is the only one that is completely landlocked by another country?\n D:Lesotho\n A:Vatican City\n B:Liechtenstein\n C:Nepal\n Choose your answer from A B C or D\n", 'D' },
 { "Who wrote the novel '1984'?\n A:George Orwell\n B:J.R.R. Tolkien\n C:Mark Twain\n D:Ernest Hemingway\n Choose your answer from A B C or D\n", 'A' },
 { "What is the largest bone in the human body?\n A:Tibia\n B:Femur\n C:Humerus\n D:Skull\n Choose your answer from A B C or D\n", 'B' },
 { "Which planet is the second from the Sun?\n A:Mars\n B:Venus\n C:Earth\n D:Mercury\n Choose your answer from A B C or D\n", 'B' },
