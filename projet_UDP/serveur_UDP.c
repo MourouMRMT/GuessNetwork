@@ -131,7 +131,7 @@ void begin(char *chaine)
 		//flag=1;
 		//jeu(chaine);
 		//if(strcmp("reponse",chaine)==0)
-		rnd =1-(rand() % (21));
+		rnd =1+ rand() % (21 + 1 - 1);
 		int rando[5];
 		sprintf(rando, "%d", &rnd);
 		printf("**index: %d **\n",rnd);
