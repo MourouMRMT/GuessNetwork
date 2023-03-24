@@ -139,11 +139,11 @@ void begin(char *chaine)
 		//strcpy(chaine,rando);
 		strcpy(chaine,questions[rnd].question);
 		sprintf(str, "%s", &questions[rnd].correctOption);
+		printf("reponse %s\n",str);
 			
 	}
 
 	
-	printf("reponse %s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
