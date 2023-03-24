@@ -2,7 +2,7 @@
 
 typedef struct {
   char* question;
-   char correctOption;
+  char correctOption;
 } Question;
 
 Question questions[NUM_QUESTIONS] = {
@@ -27,6 +27,6 @@ Question questions[NUM_QUESTIONS] = {
 { "Which country is the birthplace of pizza?\n C:Italy\n D:Greece\n A:Egypt\n B:China\n Choose your answer from A B C or D\n", 'C' }
 { "Which country has the most Nobel laureates in the world?\n B:UK\n C:Germany\n D:USA\n A:France\n Choose your answer from A B C or D\n", 'D' }
 { "Which country is the only one that has a city that spans two continents?\n B:Russia \n C:Egypt \n D:Turkey \n A:Spain \n Choose your answer from A B C or D \n", 'D' }
-{ "Which country is the only one that has English as its official language but not its most spoken language?\n C:Nigeria \n D:Ireland \n A:Australia \n B:India \n Choose your answer from A B C or D \n", 'D' }
+{ "Which country is the only one that has English as its official language but not its most spoken language?\n C:Nigeria \n D:Ireland \n A:Australia \n B:India \n Choose your answer from A B C or D \n", 'D' }}
   // Add more questions here
 };
