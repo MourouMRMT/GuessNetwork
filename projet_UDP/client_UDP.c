@@ -62,13 +62,18 @@ int main (int argc, char **argv)
     memcpy (&adUDP_serveur.sin_addr, adIP_serveur->h_addr, 4);
     while(1)
     {
-        /* lecture d'une ligne au clavier */
-		switch(flag)
-		{
-			case 0:reponse(recu,envoyer);
-			case 1:jeu(recu,envoyer);
-			//default:flag=0;
-		}//getchar();
+			if(strcmp("quit",chaine)==0)
+			{
+				close;	
+			}else{
+				/* lecture d'une ligne au clavier */
+				switch(flag)
+				{
+					case 0:reponse(recu,envoyer);
+					case 1:jeu(recu,envoyer);
+					//default:flag=0;
+				}//getchar();
+			}
 
 	
         /* envoi d'un bloc d'octets */
@@ -116,10 +121,7 @@ int main (int argc, char **argv)
 
 void reponse(char* chaine_recu,char *chaine)
 {
-	if(strcmp("quit",chaine)==0)
-	{
-		close;	
-	}
+
 	printf("on est dans reponse\n");
 	if(strcmp("oui",chaine_recu)==0)
 	{
