@@ -136,11 +136,11 @@ void begin(char *chaine)
 		sprintf(rando, "%ls", &rnd);
 		printf("**index: %s **",rando);
 		//strcpy(chaine,rando);
-		strcpy(chaine,&questions[rnd].question);
+		strcpy(chaine,questions[rnd].question);
 			
 	}
 	char str[12];
-	sprintf(str, "%s", questions[rnd].correctOption);
+	sprintf(str, "%s", &questions[rnd].correctOption);
 	printf("%s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
