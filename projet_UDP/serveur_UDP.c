@@ -138,6 +138,6 @@ void begin(char *chaine)
 	{
 		strcpy(chaine,"GG tu as WIN!");
 		
-	}
+	}else{strcpy(chaine,"Debile");}
 
 }
