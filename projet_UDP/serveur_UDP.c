@@ -7,6 +7,7 @@ void reponse (char *chaine);
 void jeu (char *chaine);
 int flag=0;
 int *num_q=0;
+int rnd=0;
 
 int main (int argc, char **argv) {
 
@@ -119,7 +120,7 @@ void reponse(char *chaine)
 	}
 }
 void begin(char *chaine)
-{	int rnd=0;
+{	
 	char str[12];
 	printf("on est dans begin\n");
 	//char cpt=0;
