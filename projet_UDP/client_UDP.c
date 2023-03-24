@@ -116,7 +116,7 @@ int main (int argc, char **argv)
 
 void reponse(char* chaine_recu,char *chaine)
 {
-	printf("on est dans reponse");
+	printf("on est dans reponse\n");
 	if(strcmp("oui",chaine_recu)==0)
 	{
 		flag=1;
@@ -131,11 +131,11 @@ void reponse(char* chaine_recu,char *chaine)
 
 void jeu(char* chaine_recu,char *chaine)
 {
-	printf("on est dans jeu");
+	printf("on est dans jeu\n");
 
 	if(flag==1){
 		int index=atoi(chaine_recu);
-		printf("**index: %d **",index);
+		printf("**index: %d **\n",index);
 		printf("%s",questions[index].question);
 		
 	    printf ("Que faut-il envoyer ? \n\t");

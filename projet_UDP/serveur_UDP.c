@@ -106,7 +106,7 @@ int main (int argc, char **argv) {
 
 void reponse(char *chaine) 
 {
-	printf("on est dans reponse ");
+	printf("on est dans reponse\n ");
 
     if (strcmp("begin",chaine)==0)
     {
@@ -120,7 +120,7 @@ void reponse(char *chaine)
 }
 void begin(char *chaine)
 {
-	printf("on est dans begin");
+	printf("on est dans begin\n");
 	//char cpt=0;
 	int rnd = 0 + (rand() % (NUM_QUESTIONS-1-0));
 	char rand[5];
