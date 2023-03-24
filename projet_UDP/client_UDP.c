@@ -67,6 +67,7 @@ int main (int argc, char **argv)
 		{
 			case 0:reponse(recu,envoyer);
 			case 1:jeu(recu,envoyer);
+			default:flag=0;
 		}//getchar();
 
 	
@@ -131,9 +132,10 @@ void reponse(char* chaine_recu,char *chaine)
 void jeu(char* chaine_recu,char *chaine)
 {
 	printf("on est dans jeu");
-	int index=atoi(chaine_recu);
-	printf("**index: %d **",index);
+
 	if(flag==1){
+		int index=atoi(chaine_recu);
+		printf("**index: %d **",index);
 		printf("%s",questions[index].question);
 		
 	    printf ("Que faut-il envoyer ? \n\t");
