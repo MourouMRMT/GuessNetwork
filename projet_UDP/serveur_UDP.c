@@ -149,7 +149,7 @@ void begin(char *chaine)
 	if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
-		
+		strcpy(chaine,"oui");		
 	}
 	/*else{cpt++;}
 	
