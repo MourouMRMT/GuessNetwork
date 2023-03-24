@@ -132,7 +132,6 @@ void reponse(char* chaine_recu,char *chaine)
 void jeu(char* chaine_recu,char *chaine)
 {
 	printf("on est dans jeu\n");
-	strcpy()
 	if(flag==1){
 		//int index=atoi(chaine_recu);
 		//printf("**index: %d **\n",index);
