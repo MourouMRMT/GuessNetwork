@@ -130,6 +130,7 @@ void reponse(char* chaine_recu,char *chaine)
 void jeu(char* chaine_recu,char *chaine)
 {
 	int index=atoi(chaine_recu);
+	printf("**index: %d **",index);
 	if(flag==1){
 		printf("%s",questions[index].question);
 		
