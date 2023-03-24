@@ -124,7 +124,7 @@ void begin(char *chaine)
 	{
 		//strcpy(chaine,&questions[1].question);
 		strcpy(chaine,"oui");
-		printf("%s\n","begin");
+		printf("%s\n","**begin**");
 		//flag=1;
 		//jeu(chaine);
 		//if(strcmp("reponse",chaine)==0)
@@ -142,6 +142,6 @@ void begin(char *chaine)
 		
 	}else{cpt++;}
 	
-	if(cpt==1){strcpy(chaine,"Debile");}
+	if(cpt==2){strcpy(chaine,"Debile");}
 
 }
