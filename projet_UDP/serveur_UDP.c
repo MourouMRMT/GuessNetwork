@@ -118,6 +118,8 @@ void reponse(char *chaine) {
 }
 void begin(char *chaine)
 {
+	char cpt=0;
+	
     if(strcmp("oui",chaine)==0)
 	{
 		//strcpy(chaine,&questions[1].question);
@@ -138,6 +140,8 @@ void begin(char *chaine)
 	{
 		strcpy(chaine,"GG tu as WIN!");
 		
-	}else{strcpy(chaine,"Debile");}
+	}else{cpt++;}
+	
+	if(cpt==1){strcpy(chaine,"Debile");}
 
 }
