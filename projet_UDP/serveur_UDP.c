@@ -132,9 +132,9 @@ void begin(char *chaine)
 		//jeu(chaine);
 		//if(strcmp("reponse",chaine)==0)
 		rnd =(rand() % (21));
-		char rando[5];
-		sprintf(rando, "%ls", &rnd);
-		printf("**index: %s **",rando);
+		int rando[5];
+		sprintf(rando, "%d", &rnd);
+		printf("**index: %d **",rnd);
 		//strcpy(chaine,rando);
 		strcpy(chaine,questions[rnd].question);
 			
