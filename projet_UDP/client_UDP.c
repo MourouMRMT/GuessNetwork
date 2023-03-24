@@ -141,5 +141,6 @@ void jeu(char* chaine_recu,char *chaine)
         scanf("%99[^\n]",chaine);
 		getchar();
 		
+		
 	}
 }
