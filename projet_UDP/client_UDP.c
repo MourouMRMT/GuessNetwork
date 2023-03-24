@@ -116,6 +116,10 @@ int main (int argc, char **argv)
 
 void reponse(char* chaine_recu,char *chaine)
 {
+	if(strcmp("quit",chaine)==0)
+	{
+		close;	
+	}
 	printf("on est dans reponse\n");
 	if(strcmp("oui",chaine_recu)==0)
 	{
@@ -126,13 +130,20 @@ void reponse(char* chaine_recu,char *chaine)
 	    printf ("Que faut-il envoyer ? \n\t");
         scanf("%99[^\n]",chaine);
         getchar();
+		
+
 	}
 }
 
 void jeu(char* chaine_recu,char *chaine)
 {
 	printf("on est dans jeu\n");
+	if(strcmp("quit",chaine)==0)
+	{
+		close;	
+	}
 	if(flag==1){
+
 		//int index=atoi(chaine_recu);
 		//printf("**index: %d **\n",index);
 		printf("%s",chaine_recu);
@@ -140,7 +151,7 @@ void jeu(char* chaine_recu,char *chaine)
 	    printf ("Que faut-il envoyer ? \n\t");
         scanf("%99[^\n]",chaine);
 		getchar();
-		
+
 		
 	}
 }

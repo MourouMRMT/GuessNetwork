@@ -165,5 +165,8 @@ void begin(char *chaine)
 	/*else{cpt++;}
 	
 	if(cpt==2){strcpy(chaine,"Debile");}*/
-
+	if(strcmp("quit",chaine)==0)
+	{
+		close;	
+	}
 }
