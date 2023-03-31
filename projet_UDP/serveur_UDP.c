@@ -125,13 +125,14 @@ void reponse(char *chaine)
     else
     {
 		strcpy(chaine,"Commencez le jeu en saisissant begin ");
+		if(strcmp("quit",chaine)==0)
+		{
+			printf("%s","**close**");
+			close;	
+		}
 	}
 	
-	if(strcmp("quit",chaine)==0)
-	{
-		printf("%s","**close**");
-		close;	
-	}
+
 }
 void begin(char *chaine)
 {	
