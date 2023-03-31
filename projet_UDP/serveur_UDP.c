@@ -116,15 +116,19 @@ int main (int argc, char **argv) {
 void reponse(char *chaine) 
 {
 	//printf("on est dans reponse\n ");
-	if (strcmp("begin",chaine)==0)
-	{
-		strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
-		flag=1;
-	}
-	else
-	{
-		strcpy(chaine,"Commencez le jeu en saisissant begin ");
+	if(strcmp("continuer",chaine)==0)
+	{flag=1;}
+	else{
+		if (strcmp("begin",chaine)==0)
+		{
+			strcpy(chaine,"Bienvenue sur GuessNetwork !!!\n\tVoulez vous commencez ? (oui/non)");
+			flag=1;
+		}
+		else
+		{
+			strcpy(chaine,"Commencez le jeu en saisissant begin ");
 
+		}
 	}
 	
 	
@@ -152,7 +156,7 @@ void begin(char *chaine)
 	//printf("reponse %s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
-		strcpy(chaine,"GG tu as WIN!\n\tEntrez quit pour sortir ou autre chose pour continuer\n");
+		strcpy(chaine,"GG tu as WIN!\n\tEntrez quit pour sortir ou continuer pour une nouvelle question\n");
 		flag=0;
 		//strcpy(chaine,"oui");		
 	}
