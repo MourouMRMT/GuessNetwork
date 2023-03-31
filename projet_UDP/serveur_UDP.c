@@ -156,7 +156,12 @@ void begin(char *chaine)
 	}
 
 	printf("reponse %s\n",str);
-	if(strcmp(str,chaine)==0)
+	if(strcmp("quit",chaine)==0)
+	{
+		printf("%s","**close**\n");
+		//close;
+		exit(0);		
+	}else if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!");
 		flag=0;
