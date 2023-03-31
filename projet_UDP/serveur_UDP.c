@@ -166,7 +166,7 @@ void begin(char *chaine)
 		//strcpy(chaine,"oui");		
 	}else
 	{
-		cpt++;
+		cpt=cpt+1;
 		printf("cpt : %d",cpt);
 	}
 	if(cpt>4){strcpy(chaine,"quit");flag=0;}
