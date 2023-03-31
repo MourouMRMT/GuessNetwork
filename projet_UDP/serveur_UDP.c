@@ -120,7 +120,7 @@ void reponse(char *chaine)
 	{
 		printf("%s","**close**");
 		//close;
-		exit(-1);		
+		exit(0);		
 	}else{
 		if (strcmp("begin",chaine)==0)
 		{
