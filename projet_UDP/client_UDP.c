@@ -143,7 +143,8 @@ void jeu(char* chaine_recu,char *chaine)
 	printf("on est dans jeu\n");
 	if(strcmp("quit",chaine)==0)
 	{
-		printf("%s","**close**");
+		printf("%s","**close**\n");
+		strcpy(chaine,"quit");
 		//close;
 		exit(0);		
 	}

@@ -118,7 +118,7 @@ void reponse(char *chaine)
 	printf("on est dans reponse\n ");
 	if(strcmp("quit",chaine)==0)
 	{
-		printf("%s","**close**");
+		printf("%s","**close**\n");
 		//close;
 		exit(0);		
 	}else{
