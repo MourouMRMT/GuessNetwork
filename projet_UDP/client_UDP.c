@@ -145,6 +145,7 @@ void jeu(char* chaine_recu,char *chaine)
 	{
 		printf("%s","**close**\n");
 		strcpy(chaine,"quit");
+		printf("%s","**quit**\n");
 		//close;
 		exit(0);		
 	}
