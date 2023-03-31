@@ -146,7 +146,7 @@ void begin(char *chaine)
 	{
 		strcpy(chaine,"oui");
 		//printf("%s\n","**begin**");
-		rnd =random_number(0,21);
+		rnd =random_number(0,38);
 		int rando[5];
 		sprintf(rando, "%d", &rnd);
 		//printf("**index: %d **\n",rnd);
