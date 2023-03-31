@@ -144,7 +144,8 @@ void jeu(char* chaine_recu,char *chaine)
 	if(strcmp("quit",chaine)==0)
 	{
 		printf("%s","**close**");
-		close;	
+		//close;
+		exit(-1);		
 	}
 	if(flag==1){
 
