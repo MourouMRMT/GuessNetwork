@@ -141,10 +141,10 @@ void reponse(char* chaine_recu,char *chaine)
 void jeu(char* chaine_recu,char *chaine)
 {
 	//printf("on est dans jeu\n");
-	if(strcmp("quit",chaine)==0)
+	if(strcmp("quit",chaine)==0 ||strcmp("quit",chaine_recu)==0 )
 	{
 		//printf("%s","**close**\n");
-		strcpy(chaine,"quit");
+		//strcpy(chaine,"quit");
 		printf("%s","**quit**\n");
 		//close;
 		exit(0);		
