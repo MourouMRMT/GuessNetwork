@@ -9,8 +9,8 @@ int flag=0;
 int *num_q=0;
 int rnd=0;
 char str[12];
-int cpt=0;
 
+int cpt=0;
 int random_number(int lower, int upper) {
     int num;
     srand(time(0)); // Initialise le générateur de nombres aléatoires
@@ -117,6 +117,7 @@ int main (int argc, char **argv) {
 void reponse(char *chaine) 
 {
 	//printf("on est dans reponse\n ");
+	cpt=0;
 	if(strcmp("continuer",chaine)==0)
 	{
 		strcpy(chaine,"Certains?(oui/non)");
