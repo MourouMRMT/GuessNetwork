@@ -139,14 +139,14 @@ void reponse(char *chaine)
 }
 void begin(char *chaine)
 {	
-	
+	int cpt=0;
 	//printf("on est dans begin\n");
 
     if(strcmp("oui",chaine)==0)
 	{
 		strcpy(chaine,"oui");
 		//printf("%s\n","**begin**");
-		rnd =random_number(0,21);
+		rnd =random_number(0,38);
 		int rando[5];
 		sprintf(rando, "%d", &rnd);
 		//printf("**index: %d **\n",rnd);
@@ -162,8 +162,12 @@ void begin(char *chaine)
 		strcpy(chaine,"GG tu as WIN!\n\tEntrez quit pour sortir ou continuer pour une nouvelle question\n");
 		flag=0;
 		//strcpy(chaine,"oui");		
+	}else
+	{
+		cpt++;
+		printf("cpt : %d",cpt);
 	}
-	
+	if(cpt==4){strcpy(chaine,"quit");}
 
 	// if(strcmp("quit",chaine)==0)
 	// {
