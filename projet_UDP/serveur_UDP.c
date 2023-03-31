@@ -116,7 +116,6 @@ int main (int argc, char **argv) {
 
 void reponse(char *chaine) 
 {
-	//printf("on est dans reponse\n ");
 	cpt=0;
 	if(strcmp("continuer",chaine)==0)
 	{
@@ -141,29 +140,21 @@ void reponse(char *chaine)
 }
 void begin(char *chaine)
 {	
-
-	//printf("on est dans begin\n");
-
     if(strcmp("oui",chaine)==0)
 	{
 		strcpy(chaine,"oui");
-		//printf("%s\n","**begin**");
 		rnd =random_number(0,38);
 		int rando[5];
 		sprintf(rando, "%d", &rnd);
-		//printf("**index: %d **\n",rnd);
 		strcpy(chaine,questions[rnd].question);
 		sprintf(str, "%s", &questions[rnd].correctOption);
 		
 			
 	}
-
-	//printf("reponse %s\n",str);
 	if(strcmp(str,chaine)==0)
 	{
 		strcpy(chaine,"GG tu as WIN!\n\tEntrez quit pour sortir ou continuer pour une nouvelle question\n");
-		flag=0;
-		//strcpy(chaine,"oui");		
+		flag=0;	
 	}else
 	{
 		cpt=cpt+1;
@@ -171,9 +162,4 @@ void begin(char *chaine)
 	}
 	if(cpt>3){strcpy(chaine,"quit");flag=0;}
 
-	// if(strcmp("quit",chaine)==0)
-	// {
-		// printf("%s","**close**");
-		// close;	
-	// }
 }

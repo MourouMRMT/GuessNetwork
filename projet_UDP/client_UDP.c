@@ -72,8 +72,7 @@ int main (int argc, char **argv)
 				{
 					case 0:reponse(recu,envoyer);
 					case 1:jeu(recu,envoyer);
-					//default:flag=0;
-				}//getchar();
+				}
 			}
 
 	
@@ -114,7 +113,6 @@ int main (int argc, char **argv)
 		
 	}
 
-
         exit (0);
     
  
@@ -122,8 +120,6 @@ int main (int argc, char **argv)
 
 void reponse(char* chaine_recu,char *chaine)
 {
-
-	//printf("on est dans reponse\n");
 	if(strcmp("oui",chaine_recu)==0)
 	{
 		flag=1;
@@ -140,19 +136,13 @@ void reponse(char* chaine_recu,char *chaine)
 
 void jeu(char* chaine_recu,char *chaine)
 {
-	//printf("on est dans jeu\n");
 	if(strcmp("quit",chaine)==0 ||strcmp("quit",chaine_recu)==0 )
 	{
-		//printf("%s","**close**\n");
-		//strcpy(chaine,"quit");
 		printf("%s","**quit**\n");
-		//close;
 		exit(0);		
 	}
 	if(flag==1){
 
-		//int index=atoi(chaine_recu);
-		//printf("**index: %d **\n",index);
 		printf("%s",chaine_recu);
 		
 	    printf ("Que faut-il envoyer ? \n\t");
