@@ -169,7 +169,7 @@ void begin(char *chaine)
 		cpt++;
 		printf("cpt : %d",cpt);
 	}
-	if(cpt>4){strcpy(chaine,"quit");}
+	if(cpt>4){strcpy(chaine,"quit");flag=0;}
 
 	// if(strcmp("quit",chaine)==0)
 	// {
