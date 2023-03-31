@@ -9,6 +9,7 @@ int flag=0;
 int *num_q=0;
 int rnd=0;
 char str[12];
+int cpt=0;
 
 int random_number(int lower, int upper) {
     int num;
@@ -139,7 +140,7 @@ void reponse(char *chaine)
 }
 void begin(char *chaine)
 {	
-	int cpt=0;
+
 	//printf("on est dans begin\n");
 
     if(strcmp("oui",chaine)==0)
