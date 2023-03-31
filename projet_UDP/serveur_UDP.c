@@ -119,7 +119,7 @@ void reponse(char *chaine)
 	if(strcmp("quit",chaine)==0)
 	{
 		printf("%s","**close**");
-		shutdown;	
+		close;	
 	}else{
 		if (strcmp("begin",chaine)==0)
 		{
