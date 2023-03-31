@@ -1,4 +1,4 @@
-/*  Application MIROIR  : cote serveur      */
+/*  Application GUESSNETWORK  : cote serveur      */
 
 #include "commun.h"
 #include "QCM.h"
@@ -94,9 +94,6 @@ int main (int argc, char **argv) {
 					reponse(message);
                 case 1:
 					begin(message);
-				//default:
-					//flag=3;
-					//reponse(message);
             }
                 /* et on lui renvoie */
             emis =  sendto (point_acces_serveur,
@@ -134,21 +131,15 @@ void begin(char *chaine)
 {	
 	
 	printf("on est dans begin\n");
-	//char cpt=0;
 
     if(strcmp("oui",chaine)==0)
 	{
-		//strcpy(chaine,&questions[1].question);
 		strcpy(chaine,"oui");
 		printf("%s\n","**begin**");
-		//flag=1;
-		//jeu(chaine);
-		//if(strcmp("reponse",chaine)==0)
 		rnd =random_number(0,21);
 		int rando[5];
 		sprintf(rando, "%d", &rnd);
 		printf("**index: %d **\n",rnd);
-		//strcpy(chaine,rando);
 		strcpy(chaine,questions[rnd].question);
 		sprintf(str, "%s", &questions[rnd].correctOption);
 		
@@ -162,11 +153,11 @@ void begin(char *chaine)
 		flag=0;
 		//strcpy(chaine,"oui");		
 	}
-	/*else{cpt++;}
 	
-	if(cpt==2){strcpy(chaine,"Debile");}*/
+
 	if(strcmp("quit",chaine)==0)
 	{
+		printf("%s","**close**");
 		close;	
 	}
 }

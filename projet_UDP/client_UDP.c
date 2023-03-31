@@ -1,4 +1,4 @@
-/*  Application MIROIR  : cote clientent        */
+/*  Application GUESSNETWORK  : cote clientent        */
 
 #include "commun.h"
 #include "QCM.h"
@@ -62,8 +62,9 @@ int main (int argc, char **argv)
     memcpy (&adUDP_serveur.sin_addr, adIP_serveur->h_addr, 4);
     while(1)
     {
-			if(strcmp("quit",chaine)==0)
+			if(strcmp("quit",envoyer)==0)
 			{
+				printf("%s","**close**");
 				close;	
 			}else{
 				/* lecture d'une ligne au clavier */
@@ -142,6 +143,7 @@ void jeu(char* chaine_recu,char *chaine)
 	printf("on est dans jeu\n");
 	if(strcmp("quit",chaine)==0)
 	{
+		printf("%s","**close**");
 		close;	
 	}
 	if(flag==1){
