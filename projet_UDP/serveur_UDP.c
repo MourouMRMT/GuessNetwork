@@ -117,7 +117,10 @@ void reponse(char *chaine)
 {
 	//printf("on est dans reponse\n ");
 	if(strcmp("continuer",chaine)==0)
-	{flag=1;}
+	{
+		strcpy(chaine,"Certains?(oui/non)");
+		flag=1;
+	}
 	else{
 		if (strcmp("begin",chaine)==0)
 		{
