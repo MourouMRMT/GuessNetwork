@@ -106,7 +106,7 @@ int main (int argc, char **argv)
             {
                 printf ("RECU  %d octets\n", recus);
                 printf ("\t%s\n", recu);
-				printf("\t%d\n",flag);
+				//printf("\t%d\n",flag);
             }
         }
 		
@@ -123,7 +123,7 @@ int main (int argc, char **argv)
 void reponse(char* chaine_recu,char *chaine)
 {
 
-	printf("on est dans reponse\n");
+	//printf("on est dans reponse\n");
 	if(strcmp("oui",chaine_recu)==0)
 	{
 		flag=1;
@@ -140,10 +140,10 @@ void reponse(char* chaine_recu,char *chaine)
 
 void jeu(char* chaine_recu,char *chaine)
 {
-	printf("on est dans jeu\n");
+	//printf("on est dans jeu\n");
 	if(strcmp("quit",chaine)==0)
 	{
-		printf("%s","**close**\n");
+		//printf("%s","**close**\n");
 		strcpy(chaine,"quit");
 		printf("%s","**quit**\n");
 		//close;
